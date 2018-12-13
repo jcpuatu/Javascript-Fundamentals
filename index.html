@@ -1,54 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Javascript Fundamentals</title>
+	<title>Find leap year</title>
 </head>
 <body>
 <script>
-	
-	var today = new Date();
-    console.log(today);
-	var day = today.getDay();
-    console.log(day);
-    var daylist = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
-    console.log("today is " + daylist[day]+".");
-    var hour = today.getHours();
-        console.log("hour: "+hour);
-    var minute = today.getMinutes();
-        console.log("minutes: "+minute;
-    var second = today.getSeconds();
-        console.log("seconds: "+second);
-    var prepand = (hour >= 12)? "PM":"AM";
-    hour = (hour >= 12)? hour - 12: hour;
-    if (hour===0 && prepand==='PM')
-        {
-    if (minute===0 && second===0)
-    {
-    hour = 12;
-    prepand = 'Noon';
-    }
-    else
-    {
-    hour = 12;
-    prepand ='PM';
-    }
-    }
-    if (hour===0 && prepand==='AM')
-    {
-    if (minute===0 && second===0)
-    {
-    hour=12;
-    prepand='Midnight';
-    }
-    else
-    {
-    hour = 12;
-    prepand = 'AM';
-    }
-    }
-    console.log("current time: "+hour+prepand+ " : " + minute + " : " +second);
-
+	year =  window.prompt("enter a year: ");
+    x = (year % 100 === 0) ? (year % 400 ===0) : (year % 4 === 0);
+    console.log("is "+year+" a leap year? "+x);
 </script>
+
 </body>
 
 
