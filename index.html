@@ -1,54 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Javascript Fundamentals</title>
+	<title>the area of a triangle</title>
 </head>
 <body>
 <script>
-	
-	var today = new Date();
-    console.log(today);
-	var day = today.getDay();
-    console.log(day);
-    var daylist = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
-    console.log("today is " + daylist[day]+".");
-    var hour = today.getHours();
-        console.log("hour: "+hour);
-    var minute = today.getMinutes();
-        console.log("minutes: "+minute;
-    var second = today.getSeconds();
-        console.log("seconds: "+second);
-    var prepand = (hour >= 12)? "PM":"AM";
-    hour = (hour >= 12)? hour - 12: hour;
-    if (hour===0 && prepand==='PM')
-        {
-    if (minute===0 && second===0)
-    {
-    hour = 12;
-    prepand = 'Noon';
-    }
-    else
-    {
-    hour = 12;
-    prepand ='PM';
-    }
-    }
-    if (hour===0 && prepand==='AM')
-    {
-    if (minute===0 && second===0)
-    {
-    hour=12;
-    prepand='Midnight';
-    }
-    else
-    {
-    hour = 12;
-    prepand = 'AM';
-    }
-    }
-    console.log("current time: "+hour+prepand+ " : " + minute + " : " +second);
-
+	var side1 = 5;
+    var side2 = 6;
+    var side3 = 7;
+    var s = (side1+side2+side3)/2;
+    var area = Math.sqrt(s*((s-side1)*(s-side2)*(s-side3)));
+    console.log("Area: ", area);
 </script>
+    <h3>the area of a triangle</h3>
 </body>
 
 
